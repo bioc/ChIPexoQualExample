@@ -14,6 +14,6 @@ Description: Data for the ChIPexoQual package, consisting of (3) chromosome 1
 License: GPL (>= 2)
 URL: http://www.github.com/keleslab/ChIPexoQual
 LazyLoad: yes
-biocViews: ExperimentData, Transcription, QualityControl
+biocViews: ExperimentData, ChIPexo
 NeedsCompilation: no
 RoxygenNote: 5.0.1

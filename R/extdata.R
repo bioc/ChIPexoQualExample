@@ -12,6 +12,5 @@
 ##' 
 ##' @docType data
 ##' @name extdata
-##' @usage list.files(system.file("extdata",package = "ChIPexoQualExample"))
 ##' @format bam files (with their respective indexes)
 NULL

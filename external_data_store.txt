@@ -1,1 +1,2 @@
-inst/ext_data
+data
+inst/extdata
