@@ -2,7 +2,7 @@ Package: ChIPexoQualExample
 Type: Package
 Title: Example data for the ChIPexoQual package, which implements a quality
     control pipeline for ChIP-exo data
-Version: 1.10.0
+Version: 1.00.0
 Depends:
     R (>= 3.3)
 Date: 2016-07-18
