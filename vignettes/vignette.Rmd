@@ -1,0 +1,55 @@
+---
+title: "ChIPexoQualExample: Accompanying example data for ChIPexoQual"
+author: |
+        | Rene Welch and Sunduz Keles
+        | Department of Statistics, University of Wisconsin-Madison
+output: 
+    BiocStyle::html_document
+vignette: >
+    %\VignetteIndexEntry{Vignette Title}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}  
+---
+    
+```{r style, echo = FALSE, results = 'asis'}
+
+    library(BiocStyle)
+    markdown(css.files = c('custom.css'))
+
+```
+
+# Overview
+
+`r Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r Biocpkg("ChIPexoQual")`. To load the package it is necessary to use:
+
+```{r muteload,include=FALSE,echo=FALSE,eval = TRUE}
+    
+    library(ChIPexoQual)
+    
+```    
+
+```{r load,include=TRUE,echo=TRUE,eval=TRUE}
+
+    library(ChIPexoQualExample,quietly = TRUE)
+
+```
+
+This package contains two types of data, it contains an example run with `r Biocpkg("ChIPexoQual")` and the raw data used to make that example run:
+
+```{r example}
+    
+    ## example run
+    data("exampleExoData")
+    exampleExoData[[1]]
+    
+    ## example raw files
+    list.files(system.file("extdata",package = "ChIPexoQualExample"))
+
+```
+
+# SessionInfo
+
+```{r info,include=TRUE,echo =TRUE,eval=TRUE}
+sessionInfo()
+```
+
