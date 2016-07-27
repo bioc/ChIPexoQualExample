@@ -5,6 +5,7 @@ author: |
         | Department of Statistics, University of Wisconsin-Madison
 output: 
     BiocStyle::html_document
+bibliography: biblio.bib        
 vignette: >
     %\VignetteIndexEntry{Vignette Title}
     %\VignetteEngine{knitr::rmarkdown}
@@ -20,31 +21,32 @@ vignette: >
 
 # Overview
 
-`r Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r Biocpkg("ChIPexoQual")`. To load the package it is necessary to use:
+`r Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r Biocpkg("ChIPexoQual")`. The data was built from the FoxA1 in mouse liver experiment published by [@exoillumina], by considering only the reads aligned to **chr1**. To load the package it is necessary to use:
 
 ```{r muteload,include=FALSE,echo=FALSE,eval = TRUE}
     
     library(ChIPexoQual)
+    library(ChIPexoQualExample)
     
 ```    
 
-```{r load,include=TRUE,echo=TRUE,eval=TRUE}
+```{r load,include=TRUE,echo=TRUE,eval=FALSE}
 
-    library(ChIPexoQualExample,quietly = TRUE)
+    library(ChIPexoQualExample)
 
 ```
 
-This package contains two types of data, it contains an example run with `r Biocpkg("ChIPexoQual")` and the raw data used to make that example run:
+This package contains these aligned reads and an example run with `r Biocpkg("ChIPexoQual")`:
 
 ```{r example}
+    
+    ## example raw files
+    list.files(system.file("extdata",package = "ChIPexoQualExample"))
     
     ## example run
     data("exampleExoData")
     exampleExoData[[1]]
     
-    ## example raw files
-    list.files(system.file("extdata",package = "ChIPexoQualExample"))
-
 ```
 
 # SessionInfo
@@ -52,4 +54,6 @@ This package contains two types of data, it contains an example run with `r Bioc
 ```{r info,include=TRUE,echo =TRUE,eval=TRUE}
 sessionInfo()
 ```
+
+# References
 

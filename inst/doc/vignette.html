@@ -75,16 +75,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <div id="overview" class="section level1">
 <h1><span class="header-section-number">1</span> Overview</h1>
 <p><em><a href="http://bioconductor.org/packages/ChIPexoQualExample">ChIPexoQualExample</a></em> is an the accompanying example data package for <em><a href="http://bioconductor.org/packages/ChIPexoQual">ChIPexoQual</a></em>. The data was built from the FoxA1 in mouse liver experiment published by <span class="citation">(Serandour et al. 2013)</span>, by considering only the reads aligned to <strong>chr1</strong>. To load the package it is necessary to use:</p>
-<pre class="r"><code>    library(ChIPexoQualExample)</code></pre>
-<p>This package contains these aligned reads and an example run with <em><a href="http://bioconductor.org/packages/ChIPexoQual">ChIPexoQual</a></em>:</p>
-<pre class="r"><code>    ## example raw files
-    list.files(system.file(&quot;extdata&quot;,package = &quot;ChIPexoQualExample&quot;))</code></pre>
-<pre><code>## [1] &quot;ChIPexo_carroll_FoxA1_mouse_rep1_chr1.bam&quot;    
-## [2] &quot;ChIPexo_carroll_FoxA1_mouse_rep1_chr1.bam.bai&quot;
-## [3] &quot;ChIPexo_carroll_FoxA1_mouse_rep2_chr1.bam&quot;    
-## [4] &quot;ChIPexo_carroll_FoxA1_mouse_rep2_chr1.bam.bai&quot;
-## [5] &quot;ChIPexo_carroll_FoxA1_mouse_rep3_chr1.bam&quot;    
-## [6] &quot;ChIPexo_carroll_FoxA1_mouse_rep3_chr1.bam.bai&quot;</code></pre>
+<pre class="r"><code>    library(ChIPexoQualExample,quietly = TRUE)</code></pre>
+<p>This package contains two types of data, it contains an example run with <em><a href="http://bioconductor.org/packages/ChIPexoQual">ChIPexoQual</a></em> and the raw data used to make that example run:</p>
 <pre class="r"><code>    ## example run
     data(&quot;exampleExoData&quot;)
     exampleExoData[[1]]</code></pre>
@@ -130,6 +122,14 @@ document.addEventListener("DOMContentLoaded", function() {
 ##   [655785]               0.5         0      -Inf      -Inf
 ##   -------
 ##   seqinfo: 1 sequence from an unspecified genome; no seqlengths</code></pre>
+<pre class="r"><code>    ## example raw files
+    list.files(system.file(&quot;extdata&quot;,package = &quot;ChIPexoQualExample&quot;))</code></pre>
+<pre><code>## [1] &quot;ChIPexo_carroll_FoxA1_mouse_rep1_chr1.bam&quot;    
+## [2] &quot;ChIPexo_carroll_FoxA1_mouse_rep1_chr1.bam.bai&quot;
+## [3] &quot;ChIPexo_carroll_FoxA1_mouse_rep2_chr1.bam&quot;    
+## [4] &quot;ChIPexo_carroll_FoxA1_mouse_rep2_chr1.bam.bai&quot;
+## [5] &quot;ChIPexo_carroll_FoxA1_mouse_rep3_chr1.bam&quot;    
+## [6] &quot;ChIPexo_carroll_FoxA1_mouse_rep3_chr1.bam.bai&quot;</code></pre>
 </div>
 <div id="sessioninfo" class="section level1">
 <h1><span class="header-section-number">2</span> SessionInfo</h1>
