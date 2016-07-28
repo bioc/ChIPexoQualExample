@@ -27,7 +27,6 @@ vignette: >
 
 ```{r muteload,include=FALSE,echo=FALSE,eval = TRUE}
     
-    library(ChIPexoQual)
     library(ChIPexoQualExample)
     
 ```    
@@ -40,16 +39,22 @@ vignette: >
 
 This package contains these aligned reads and an example run with `r Biocpkg("ChIPexoQual")`:
 
-```{r example}
-    
+```{r files}
+
     ## example raw files
     list.files(system.file("extdata",package = "ChIPexoQualExample"))
+
+```
+
+```{r example,include=TRUE,echo=TRUE,eval=FALSE}
     
     ## example run
     data("exampleExoData")
-    exampleExoData[[1]]
-    
+
 ```
+
+
+
 
 # SessionInfo
 
