@@ -16,7 +16,10 @@ vignette: >
 
 ```{r style, echo = FALSE, results = 'asis'}
 
-    library(BiocStyle)
+    if(requireNamespace("base", quietly = TRUE)){
+        base::library("BiocStyle")
+    }
+    
     markdown(css.files = c('custom.css'))
 
 ```
