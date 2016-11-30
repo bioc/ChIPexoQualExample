@@ -16,7 +16,10 @@ vignette: >
 
 ```{r style, echo = FALSE, results = 'asis'}
 
-    library(BiocStyle)
+    if(requireNamespace("base", quietly = TRUE)){
+        base::library("BiocStyle")
+    }
+    
     markdown(css.files = c('custom.css'))
 
 ```
@@ -45,15 +48,6 @@ This package contains these aligned reads and an example run with `r Biocpkg("Ch
     list.files(system.file("extdata",package = "ChIPexoQualExample"))
 
 ```
-
-```{r example,include=TRUE,echo=TRUE,eval=FALSE}
-    
-    ## example run
-    data("exampleExoData")
-
-```
-
-
 
 
 # SessionInfo
