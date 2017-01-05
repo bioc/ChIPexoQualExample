@@ -1,0 +1,19 @@
+Package: ChIPexoQualExample
+Type: Package
+Title: Example data for the ChIPexoQual package, which implements a
+        quality control pipeline for ChIP-exo data
+Version: 0.99.3
+Depends: R (>= 3.3)
+Date: 2016-07-18
+Author: Rene Welch, Dongjun Chung, Sunduz Keles
+Maintainer: Rene Welch <welch@stat.wisc.edu>
+Description: Data for the ChIPexoQual package, consisting of (3)
+        chromosome 1 aligned reads from a ChIP-exo experiment for FoxA1
+        in mouse liver cell lines aligned to the mm9 genome.
+License: GPL (>= 2)
+URL: http://www.github.com/keleslab/ChIPexoQualExample
+LazyLoad: yes
+VignetteBuilder: knitr
+biocViews: ExperimentData, Genome
+NeedsCompilation: no
+RoxygenNote: 5.0.1

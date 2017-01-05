@@ -1,0 +1,60 @@
+---
+title: "ChIPexoQualExample: Accompanying example data for ChIPexoQual"
+author: |
+        | Rene Welch and S&#252;nd&#252;z Kele&#351;
+        | Department of Statistics, University of Wisconsin-Madison
+output: 
+    BiocStyle::html_document
+bibliography: biblio.bib        
+vignette: >
+    %\VignetteIndexEntry{Vignette Title}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}  
+---
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+```{r style, echo = FALSE, results = 'asis'}
+
+    if(requireNamespace("base", quietly = TRUE)){
+        base::library("BiocStyle")
+    }
+    
+    markdown(css.files = c('custom.css'))
+
+```
+
+# Overview
+
+`r Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r Biocpkg("ChIPexoQual")`. The data was built from the FoxA1 in mouse liver experiment published by [@exoillumina], by considering only the reads aligned to **chr1**. To load the package it is necessary to use:
+
+```{r muteload,include=FALSE,echo=FALSE,eval = TRUE}
+    
+    library(ChIPexoQualExample)
+    
+```    
+
+```{r load,include=TRUE,echo=TRUE,eval=FALSE}
+
+    library(ChIPexoQualExample)
+
+```
+
+This package contains these aligned reads and an example run with `r Biocpkg("ChIPexoQual")`:
+
+```{r files}
+
+    ## example raw files
+    list.files(system.file("extdata",package = "ChIPexoQualExample"))
+
+```
+
+
+# SessionInfo
+
+```{r info,include=TRUE,echo =TRUE,eval=TRUE}
+sessionInfo()
+```
+
+# References
+
