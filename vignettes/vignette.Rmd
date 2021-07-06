@@ -1,52 +1,43 @@
 ---
 title: "ChIPexoQualExample: Accompanying example data for ChIPexoQual"
-author: |
-        | Rene Welch and S&#252;nd&#252;z Kele&#351;
-        | Department of Statistics, University of Wisconsin-Madison
-output: 
-    BiocStyle::html_document
-bibliography: biblio.bib        
+author:
+  - name: Rene Welch
+    affiliation: &id Department of Biostatistics and Medical Informatics, University of Wisconsin-Madison
+    email: rwelch2@wisc.edu
+  - name: S&#252;nd&#252;z Kele&#351
+    affiliation:
+      - Department of Statistics, University of Wisconsin-Madison
+      - *id
+package: ChIPexoQualExample
+date: "`r BiocStyle::doc_date()`"
+bibliography: biblio.bib     
 vignette: >
-    %\VignetteIndexEntry{Vignette Title}
+    %\VignetteIndexEntry{ChIPexoQualExample}
     %\VignetteEngine{knitr::rmarkdown}
-    %\VignetteEncoding{UTF-8}  
+    %\VignetteEncoding{UTF-8}
+output:
+    BiocStyle::html_document    
 ---
+
+```{r style, echo = FALSE, results = 'asis'}`r ''`
+BiocStyle::markdown()
+```
 
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
-```{r style, echo = FALSE, results = 'asis'}
-
-    if(requireNamespace("base", quietly = TRUE)){
-        base::library("BiocStyle")
-    }
-    
-    markdown(css.files = c('custom.css'))
-
-```
-
 # Overview
 
-`r Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r Biocpkg("ChIPexoQual")`. The data was built from the FoxA1 in mouse liver experiment published by [@exoillumina], by considering only the reads aligned to **chr1**. To load the package it is necessary to use:
+`r BiocStyle::Biocpkg("ChIPexoQualExample")` is an the accompanying example data package for `r BiocStyle::Biocpkg("ChIPexoQual")`. The data was built from the FoxA1 in mouse liver experiment published by [@exoillumina], by considering only the reads aligned to **chr1**. To load the package it is necessary to use:
 
-```{r muteload,include=FALSE,echo=FALSE,eval = TRUE}
-    
-    library(ChIPexoQualExample)
-    
-```    
-
-```{r load,include=TRUE,echo=TRUE,eval=FALSE}
-
-    library(ChIPexoQualExample)
-
+```{r load, include=TRUE, echo=TRUE, eval=FALSE}
+library(ChIPexoQualExample, quietly = TRUE)
 ```
 
-This package contains these aligned reads and an example run with `r Biocpkg("ChIPexoQual")`:
+This package contains these aligned reads and an example run with `r BiocStyle::Biocpkg("ChIPexoQual")`:
 
 ```{r files}
-
-    ## example raw files
-    list.files(system.file("extdata",package = "ChIPexoQualExample"))
-
+## example raw files
+list.files(system.file("extdata", package = "ChIPexoQualExample"))
 ```
 
 

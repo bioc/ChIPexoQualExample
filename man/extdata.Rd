@@ -4,7 +4,9 @@
 \name{extdata}
 \alias{extdata}
 \title{FoxA1 ChIP-exo experiment}
-\format{bam files (with their respective indexes)}
+\format{
+bam files (with their respective indexes)
+}
 \description{
 bam file with the reads aligned to chr1 from FoxA1 in mm9 liver cell lines
 published by Serandour et al., 2013. This package contains the files
@@ -17,4 +19,3 @@ published by Serandour et al., 2013. This package contains the files
 }
 and their respective index files.
 }
-
