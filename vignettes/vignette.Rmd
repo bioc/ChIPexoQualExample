@@ -38,6 +38,7 @@ This package contains these aligned reads and an example run with `r BiocStyle::
 ```{r files}
 ## example raw files
 list.files(system.file("extdata", package = "ChIPexoQualExample"))
+
 ```
 
 
